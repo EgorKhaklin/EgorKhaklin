@@ -5,8 +5,8 @@
     @keyframes beamSweep {
       0%   { transform: translateX(-160px); opacity: 0; }
       3%   { opacity: 1; }
-      42%  { opacity: 1; }
-      45%  { transform: translateX(1360px); opacity: 0; }
+      40%  { opacity: 1; }
+      42.5% { transform: translateX(1360px); opacity: 0; }
       100% { transform: translateX(1360px); opacity: 0; }
     }
     .gsweep { animation: beamSweep 20s linear infinite; }
@@ -16,7 +16,7 @@
        clipPath breaks the clip in WebKit/Safari, which is why the letters stopped lighting up. */
     @keyframes revealSweep {
       0%   { transform: skewX(-12deg) translateX(-160px); }
-      45%  { transform: skewX(-12deg) translateX(1360px); }
+      42.5% { transform: skewX(-12deg) translateX(1360px); }
       100% { transform: skewX(-12deg) translateX(1360px); }
     }
     .revealsweep { animation: revealSweep 20s linear infinite; }
@@ -27,7 +27,7 @@
     @keyframes frostFade { 0% { opacity:0; } 4% { opacity:1; } 98% { opacity:1; } 100% { opacity:0; } }
     .frost { animation: frostFade 20s linear infinite; }
     /* VERIFIED appears only after the sweep finishes (45%), holds, fades before reset */
-    @keyframes verifiedAppear { 0%,45% { opacity:0; } 48% { opacity:1; } 98% { opacity:1; } 100% { opacity:0; } }
+    @keyframes verifiedAppear { 0%,42.5% { opacity:0; } 45.5% { opacity:1; } 98% { opacity:1; } 100% { opacity:0; } }
     .verified { animation: verifiedAppear 20s linear infinite; }
     @keyframes breathe { 0%,100% { opacity:.5; } 50% { opacity:.95; } }
     .pulse { animation: breathe 7s ease-in-out infinite; }
