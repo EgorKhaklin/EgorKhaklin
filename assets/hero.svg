@@ -1,21 +1,27 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300" role="img" aria-label="Egor Khaklin — Proof over trust. You should never have to take the code's word for it.">
   <title>Egor Khaklin — Proof over trust</title>
   <style>
-    /* ===== SHARED sweep — identical in hero.svg and divider.svg so they align.
-       bright center at local x=0; translateX maps straight onto the 1200 viewBox. */
-    @keyframes glassSweep {
+    /* ===== shared beam timeline — hero beam, reveal clip, and divider glint all ride this ===== */
+    @keyframes beamSweep {
       0%   { transform: translateX(-160px); opacity: 0; }
-      7%   { opacity: 1; }
-      93%  { opacity: 1; }
+      3%   { opacity: 1; }
+      42%  { opacity: 1; }
+      45%  { transform: translateX(1360px); opacity: 0; }
       100% { transform: translateX(1360px); opacity: 0; }
     }
-    .gsweep { animation: glassSweep 13s linear infinite; }
+    .gsweep { animation: beamSweep 20s linear infinite; }
 
+    /* cumulative lit word: revealed by the growing clip, fades out just before the loop */
+    @keyframes litFade { 0%,98% { opacity:1; } 100% { opacity:0; } }
+    .litword { animation: litFade 20s linear infinite; }
+    /* VERIFIED appears only after the sweep finishes (45%), holds, fades before reset */
+    @keyframes verifiedAppear { 0%,45% { opacity:0; } 48% { opacity:1; } 98% { opacity:1; } 100% { opacity:0; } }
+    .verified { animation: verifiedAppear 20s linear infinite; }
     @keyframes breathe { 0%,100% { opacity:.5; } 50% { opacity:.95; } }
     .pulse { animation: breathe 7s ease-in-out infinite; }
     @media (prefers-reduced-motion: reduce) {
-      .gsweep,.pulse { animation:none; }
-      .gsweep { opacity:0; }
+      .gsweep,.litword,.verified,.pulse { animation:none; }
+      .gsweep { opacity:0; }   /* hide the moving beam/glint; clip + word + verified stay at their full base state */
     }
   </style>
   <defs>
@@ -33,18 +39,13 @@
       <stop offset="50%" stop-color="#cdf6ff" stop-opacity=".9"/><stop offset="52%" stop-color="#ffffff" stop-opacity=".98"/><stop offset="54%" stop-color="#5cc8ff" stop-opacity=".9"/>
       <stop offset="64%" stop-color="#00bcd4" stop-opacity=".10"/><stop offset="100%" stop-color="#00bcd4" stop-opacity="0"/>
     </linearGradient>
-    <!-- spectral fringe (trails BEHIND the core) -->
+    <!-- spectral fringe: brightest at the right (where it meets the core), trailing violet to the left -->
     <linearGradient id="fringe" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#a98bff" stop-opacity="0"/><stop offset="36%" stop-color="#a98bff" stop-opacity=".30"/>
-      <stop offset="58%" stop-color="#5cc8ff" stop-opacity=".42"/><stop offset="74%" stop-color="#7df9ff" stop-opacity=".5"/><stop offset="100%" stop-color="#7df9ff" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#a98bff" stop-opacity="0"/><stop offset="42%" stop-color="#a98bff" stop-opacity=".26"/>
+      <stop offset="74%" stop-color="#5cc8ff" stop-opacity=".42"/><stop offset="93%" stop-color="#9af1ff" stop-opacity=".6"/><stop offset="100%" stop-color="#eafdff" stop-opacity=".5"/>
     </linearGradient>
     <linearGradient id="wm" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#eafbff"/><stop offset="55%" stop-color="#bfeefb"/><stop offset="100%" stop-color="#67c9ef"/>
-    </linearGradient>
-    <!-- soft beam mask gradient: bright in the middle, fades at the edges -->
-    <linearGradient id="beamGrad" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#fff" stop-opacity="0"/><stop offset="38%" stop-color="#fff" stop-opacity=".55"/>
-      <stop offset="50%" stop-color="#fff" stop-opacity="1"/><stop offset="62%" stop-color="#fff" stop-opacity=".55"/><stop offset="100%" stop-color="#fff" stop-opacity="0"/>
     </linearGradient>
     <filter id="soft" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="6"/></filter>
     <filter id="frostBlur" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="2"/></filter>
@@ -55,8 +56,9 @@
     </filter>
     <rect id="paneShape" x="40" y="40" width="1120" height="220" rx="22"/>
     <clipPath id="paneClip"><use href="#paneShape"/></clipPath>
-    <!-- soft moving beam that lights each letter as it passes -->
-    <mask id="beamMask"><rect class="gsweep" x="-95" y="0" width="190" height="300" fill="url(#beamGrad)"/></mask>
+    <!-- growing reveal: rect's right edge sits at the beam (local x=0); translateX slides it.
+         base transform = full reveal so static / reduced-motion shows the whole lit word. -->
+    <clipPath id="revealClip"><rect class="gsweep" x="-2200" y="0" width="2200" height="300" transform="translate(1360,0)"/></clipPath>
     <g id="wordmark"><text x="600" y="150" text-anchor="middle" font-family="'Helvetica Neue', Arial, system-ui, sans-serif" font-size="86" font-weight="700" letter-spacing="14">KHAKLIN</text></g>
   </defs>
 
@@ -69,21 +71,21 @@
       <path d="M200 40 V260 M400 40 V260 M600 40 V260 M800 40 V260 M1000 40 V260"/>
     </g>
     <use href="#paneShape" fill="url(#paneFill)"/>
-
-    <!-- light frost texture -->
     <use href="#paneShape" filter="url(#frostTex)" opacity=".5"/>
 
-    <!-- wordmark base: readable, slightly soft (behind the glass) -->
-    <use href="#wordmark" fill="url(#wm)" opacity=".5" filter="url(#frostBlur)"/>
+    <!-- dim base: unlit letters read faintly -->
+    <use href="#wordmark" fill="url(#wm)" opacity=".28" filter="url(#frostBlur)"/>
 
-    <!-- per-letter light-up: bright wordmark revealed only under the moving soft beam -->
-    <g mask="url(#beamMask)"><use href="#wordmark" fill="#eafdff" filter="url(#textGlow)"/></g>
+    <!-- cumulative bright word, revealed up to the beam and held lit -->
+    <g class="litword"><g clip-path="url(#revealClip)"><use href="#wordmark" fill="#eafdff" filter="url(#textGlow)"/></g></g>
 
-    <!-- sweep: FRINGE behind, halo, then the crisp core on top -->
-    <g class="gsweep">
-      <rect x="-150" y="40" width="150" height="220" fill="url(#fringe)" transform="skewX(-12)" opacity=".6"/>
-      <rect x="-90"  y="40" width="180" height="220" fill="url(#shaft)" filter="url(#soft)" opacity=".6"/>
-      <rect x="-7"   y="40" width="14"  height="220" fill="url(#shaft)"/>
+    <!-- the beam: ONE connected slanted streak (fringe behind, halo, crisp core on top), all skewed together -->
+    <g class="gsweep" opacity="0">
+      <g transform="skewX(-12)">
+        <rect x="-130" y="40" width="130" height="220" fill="url(#fringe)"/>
+        <rect x="-80"  y="40" width="160" height="220" fill="url(#shaft)" filter="url(#soft)" opacity=".55"/>
+        <rect x="-6"   y="40" width="12"  height="220" fill="url(#shaft)"/>
+      </g>
     </g>
 
     <use href="#paneShape" fill="url(#sheen)"/>
@@ -94,7 +96,8 @@
 
   <circle class="pulse" cx="74" cy="74" r="3.4" fill="#00bcd4"/>
   <text x="90" y="79" font-family="ui-monospace,'SF Mono',Menlo,monospace" font-size="14" letter-spacing="2" fill="#9fb4bd">@EgorKhaklin</text>
-  <g transform="translate(1042,62)">
+  <!-- VERIFIED: appears after the sweep -->
+  <g class="verified" transform="translate(1042,62)">
     <rect x="0" y="0" width="118" height="26" rx="13" fill="#00bcd4" fill-opacity=".10" stroke="#00bcd4" stroke-opacity=".34"/>
     <circle class="pulse" cx="17" cy="13" r="4" fill="#5cc8ff"/>
     <text x="32" y="17" font-family="ui-monospace,'SF Mono',Menlo,monospace" font-size="12" letter-spacing="1" fill="#bfeefb">VERIFIED ✓</text>
