@@ -8,7 +8,7 @@
 
 I build **verifiable systems**: software you don't have to believe.
 
-Most code asks for your trust. Mine hands you the receipt. The projects below are a single idea refracted through different glass, a verifiable language, verifiable analytics, a verifiable identity, each one carrying its own proof, because you should never have to take the code's word for it. Clone it, run it, and watch it prove itself.
+Most code still asks for your trust. Mine hands you the receipt instead. The projects are all the same idea, just refracted through different glass: a verifiable language, verifiable analytics, a verifiable identity. Each one carries its own proof, because you should never have to take the code’s word for it. Clone it, run it, and watch it prove itself.
 
 <br>
 </div>
