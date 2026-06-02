@@ -13,8 +13,6 @@ Most code asks for your trust. Mine hands you the receipt. The projects below ar
 <div>
 
 
-<img src="assets/divider.svg" width="100%" alt="" />
-
 ## Selected work
 
 > Not a portfolio. Evidence.
