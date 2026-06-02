@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/hero.svg?v=5" width="100%" alt="Egor Khaklin — Proof over trust. You should never have to take the code's word for it." />
+<img src="assets/hero.svg?v=6" width="100%" alt="Egor Khaklin — Proof over trust. You should never have to take the code's word for it." />
 
 </div>
 
@@ -42,7 +42,7 @@ A national identity-token reference implementation. Post-quantum signing, zero-k
 <br>
 
 
-<img src="assets/divider.svg?v=5" width="100%" alt="" />
+<img src="assets/divider.svg?v=6" width="100%" alt="" />
 
 <div align="center">
 
