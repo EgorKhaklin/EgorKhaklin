@@ -1,0 +1,4 @@
+# build/preview scaffolding — not part of the published profile
+_preview/
+assets/_candidates/
+.DS_Store

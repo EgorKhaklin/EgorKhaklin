@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 24" width="1200" height="24" role="img" aria-label="Decorative divider with a slow cyan light sweep">
+  <style>
+    @keyframes sweep {
+      0%   { transform: translateX(-340px); opacity: 0; }
+      8%   { opacity: 1; }
+      50%  { opacity: 1; }
+      92%  { opacity: 1; }
+      100% { transform: translateX(1200px); opacity: 0; }
+    }
+    @keyframes corepulse {
+      0%, 100% { opacity: 0.55; }
+      50%      { opacity: 1; }
+    }
+    .glint { animation: sweep 9s cubic-bezier(0.4, 0, 0.2, 1) infinite; }
+    .nucleus { animation: corepulse 9s ease-in-out infinite; }
+    @media (prefers-reduced-motion: reduce) {
+      .glint { animation: none; transform: translateX(440px); opacity: 1; }
+      .nucleus { animation: none; opacity: 0.9; }
+    }
+  </style>
+
+  <defs>
+    <filter id="dGlow" x="-20%" y="-400%" width="140%" height="900%">
+      <feGaussianBlur stdDeviation="2.2" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <linearGradient id="dRule" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0"    stop-color="#00bcd4" stop-opacity="0"/>
+      <stop offset="0.18" stop-color="#00bcd4" stop-opacity="0.30"/>
+      <stop offset="0.5"  stop-color="#5cc8ff" stop-opacity="0.55"/>
+      <stop offset="0.82" stop-color="#00bcd4" stop-opacity="0.30"/>
+      <stop offset="1"    stop-color="#00bcd4" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="dGlint" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0"    stop-color="#00bcd4" stop-opacity="0"/>
+      <stop offset="0.42" stop-color="#5cc8ff" stop-opacity="0.85"/>
+      <stop offset="0.5"  stop-color="#eafaff" stop-opacity="1"/>
+      <stop offset="0.58" stop-color="#5cc8ff" stop-opacity="0.85"/>
+      <stop offset="1"    stop-color="#00bcd4" stop-opacity="0"/>
+    </linearGradient>
+
+    <radialGradient id="dHalo" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0"   stop-color="#aef0ff" stop-opacity="0.9"/>
+      <stop offset="0.4" stop-color="#00bcd4" stop-opacity="0.45"/>
+      <stop offset="1"   stop-color="#00bcd4" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- transparent background: the rule blends into any GitHub theme -->
+
+  <rect x="0" y="11.4" width="1200" height="1.2" fill="url(#dRule)"/>
+
+  <g class="glint" filter="url(#dGlow)">
+    <ellipse class="nucleus" cx="170" cy="12" rx="150" ry="9" fill="url(#dHalo)"/>
+    <rect x="0" y="10.6" width="340" height="2.8" rx="1.4" fill="url(#dGlint)"/>
+    <circle class="nucleus" cx="170" cy="12" r="1.9" fill="#f2fdff"/>
+  </g>
+</svg>

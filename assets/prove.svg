@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 120" width="760" height="120" role="img" aria-label="Glass terminal: glass prove --emit p.txt hello.glass, PENTECOST ACCEPT">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0a0e13"/>
+      <stop offset="1" stop-color="#05070a"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.07"/>
+      <stop offset="0.5" stop-color="#00bcd4" stop-opacity="0.05"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.025"/>
+    </linearGradient>
+    <linearGradient id="rim" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5cc8ff" stop-opacity="0.55"/>
+      <stop offset="0.5" stop-color="#00bcd4" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#5cc8ff" stop-opacity="0.4"/>
+    </linearGradient>
+    <linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5cc8ff" stop-opacity="0"/>
+      <stop offset="0.42" stop-color="#5cc8ff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#5cc8ff" stop-opacity="0.16"/>
+      <stop offset="0.58" stop-color="#5cc8ff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#5cc8ff" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#00bcd4" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#00bcd4" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="2.4"/>
+    </filter>
+    <filter id="frost" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+    <clipPath id="panelClip"><rect x="20" y="16" width="720" height="88" rx="14"/></clipPath>
+    <style>
+      :root{ }
+      .mono{ font-family: ui-monospace,'SF Mono',Menlo,monospace; font-size:17px; letter-spacing:0.5px; }
+      /* caret blink */
+      .caret{ animation: blink 1.05s steps(1) infinite; }
+      @keyframes blink{ 0%,49%{opacity:1} 50%,100%{opacity:0} }
+      /* light sweep across the glass */
+      .lightsweep{ animation: sweepmove 11s ease-in-out infinite; }
+      @keyframes sweepmove{
+        0%{ transform: translateX(-360px) }
+        55%{ transform: translateX(760px) }
+        100%{ transform: translateX(760px) }
+      }
+      /* per-glyph type reveal: prompt chars staggered. Total cycle 11s. */
+      .g{ opacity:0; }
+      .type .g{ animation: pop 11s steps(1) infinite; }
+      @keyframes pop{ 0%{opacity:0} 100%{opacity:1} }
+      /* result line + glow pulse */
+      .result{ opacity:0; animation: showRes 11s ease infinite; }
+      @keyframes showRes{
+        0%,52%{ opacity:0 } 56%{ opacity:1 } 92%{ opacity:1 } 98%,100%{ opacity:0 }
+      }
+      .accept{ animation: acceptGlow 11s ease infinite; }
+      @keyframes acceptGlow{
+        0%,55%{ filter:none; opacity:0 }
+        58%{ opacity:1 }
+        62%{ filter:drop-shadow(0 0 7px #00e0ff); }
+        70%{ filter:drop-shadow(0 0 1px #00bcd4); }
+        80%{ filter:drop-shadow(0 0 6px #00e0ff); }
+        92%{ opacity:1; filter:drop-shadow(0 0 2px #00bcd4); }
+        98%,100%{ opacity:0 }
+      }
+      .resultGlow{ opacity:0; animation: resGlow 11s ease infinite; }
+      @keyframes resGlow{ 0%,57%{opacity:0} 63%{opacity:0.9} 78%{opacity:0.35} 90%{opacity:0.7} 96%,100%{opacity:0} }
+      /* caret that hides once result appears */
+      .promptCaret{ animation: caretLife 11s steps(1) infinite; }
+      @keyframes caretLife{ 0%,50%{opacity:1} 52%,100%{opacity:0} }
+      @media (prefers-reduced-motion: reduce){
+        .type .g,.result,.accept,.lightsweep,.caret,.promptCaret,.resultGlow{ animation:none !important; opacity:1 !important; }
+        .caret,.promptCaret{ opacity:1 !important; }
+      }
+    </style>
+  </defs>
+
+  <!-- baked dark background -->
+  <rect x="0" y="0" width="760" height="120" fill="url(#bg)"/>
+  <rect x="0" y="0" width="760" height="120" fill="url(#glow)" opacity="0.5" transform="translate(0,40)"/>
+
+  <!-- frosted glass panel -->
+  <g>
+    <rect x="20" y="16" width="720" height="88" rx="14" fill="url(#panel)"/>
+    <rect x="20" y="16" width="720" height="88" rx="14" fill="none" stroke="url(#rim)" stroke-width="1.1"/>
+    <!-- top inner highlight -->
+    <rect x="22" y="18" width="716" height="20" rx="12" fill="#ffffff" opacity="0.04"/>
+  </g>
+
+  <!-- light sweep / refraction, clipped to panel -->
+  <g clip-path="url(#panelClip)">
+    <g class="lightsweep">
+      <rect x="0" y="16" width="300" height="88" fill="url(#sweep)"/>
+    </g>
+  </g>
+
+  <!-- window dots -->
+  <g>
+    <circle cx="42" cy="33" r="4" fill="#ff5f57" opacity="0.85"/>
+    <circle cx="58" cy="33" r="4" fill="#febc2e" opacity="0.85"/>
+    <circle cx="74" cy="33" r="4" fill="#28c840" opacity="0.85"/>
+    <text x="694" y="37" font-family="ui-monospace,'SF Mono',Menlo,monospace" font-size="10" letter-spacing="1.5" fill="#9fb4bd" opacity="0.6">glass</text>
+  </g>
+
+  <!-- PROMPT LINE -->
+  <g class="mono type" transform="translate(44,68)">
+    <text x="0" y="0" fill="#5cc8ff" font-weight="600">$</text>
+    <g fill="#e8f6fb">
+      <text x="14"  y="0" class="g" style="animation-delay:0.30s">g</text>
+      <text x="24"  y="0" class="g" style="animation-delay:0.40s">l</text>
+      <text x="34"  y="0" class="g" style="animation-delay:0.50s">a</text>
+      <text x="44"  y="0" class="g" style="animation-delay:0.60s">s</text>
+      <text x="54"  y="0" class="g" style="animation-delay:0.70s">s</text>
+      <text x="64"  y="0" class="g" style="animation-delay:0.80s"> </text>
+      <text x="74"  y="0" class="g" fill="#5cc8ff" style="animation-delay:0.90s">p</text>
+      <text x="84"  y="0" class="g" fill="#5cc8ff" style="animation-delay:1.00s">r</text>
+      <text x="94"  y="0" class="g" fill="#5cc8ff" style="animation-delay:1.10s">o</text>
+      <text x="104" y="0" class="g" fill="#5cc8ff" style="animation-delay:1.20s">v</text>
+      <text x="114" y="0" class="g" fill="#5cc8ff" style="animation-delay:1.30s">e</text>
+      <text x="128" y="0" class="g" fill="#9fb4bd" style="animation-delay:1.45s">-</text>
+      <text x="138" y="0" class="g" fill="#9fb4bd" style="animation-delay:1.55s">-</text>
+      <text x="148" y="0" class="g" fill="#9fb4bd" style="animation-delay:1.65s">e</text>
+      <text x="158" y="0" class="g" fill="#9fb4bd" style="animation-delay:1.75s">m</text>
+      <text x="168" y="0" class="g" fill="#9fb4bd" style="animation-delay:1.85s">i</text>
+      <text x="178" y="0" class="g" fill="#9fb4bd" style="animation-delay:1.95s">t</text>
+      <text x="192" y="0" class="g" style="animation-delay:2.10s">p</text>
+      <text x="202" y="0" class="g" style="animation-delay:2.20s">.</text>
+      <text x="212" y="0" class="g" style="animation-delay:2.30s">t</text>
+      <text x="222" y="0" class="g" style="animation-delay:2.40s">x</text>
+      <text x="232" y="0" class="g" style="animation-delay:2.50s">t</text>
+      <text x="246" y="0" class="g" style="animation-delay:2.65s">h</text>
+      <text x="256" y="0" class="g" style="animation-delay:2.75s">e</text>
+      <text x="266" y="0" class="g" style="animation-delay:2.85s">l</text>
+      <text x="276" y="0" class="g" style="animation-delay:2.95s">l</text>
+      <text x="286" y="0" class="g" style="animation-delay:3.05s">o</text>
+      <text x="296" y="0" class="g" style="animation-delay:3.15s">.</text>
+      <text x="306" y="0" class="g" fill="#5cc8ff" style="animation-delay:3.25s">g</text>
+      <text x="316" y="0" class="g" fill="#5cc8ff" style="animation-delay:3.35s">l</text>
+      <text x="326" y="0" class="g" fill="#5cc8ff" style="animation-delay:3.45s">a</text>
+      <text x="336" y="0" class="g" fill="#5cc8ff" style="animation-delay:3.55s">s</text>
+      <text x="346" y="0" class="g" fill="#5cc8ff" style="animation-delay:3.65s">s</text>
+    </g>
+    <!-- prompt caret rides at end of typed text, disappears when result shows -->
+    <rect class="promptCaret" x="358" y="-13" width="8" height="17" rx="1.5" fill="#5cc8ff"/>
+  </g>
+
+  <!-- RESULT LINE: PENTECOST: ACCEPT -->
+  <g transform="translate(44,94)">
+    <g class="resultGlow">
+      <ellipse cx="120" cy="-5" rx="120" ry="16" fill="url(#glow)" filter="url(#frost)"/>
+    </g>
+    <g class="mono result">
+      <text x="0" y="0" fill="#9fb4bd" letter-spacing="1">PENTECOST:</text>
+    </g>
+    <g class="accept">
+      <text x="118" y="0" class="mono" font-weight="700" letter-spacing="1.2" fill="#00e6ff" filter="url(#soft)" opacity="0.55">ACCEPT</text>
+      <text x="118" y="0" class="mono" font-weight="700" letter-spacing="1.2" fill="#5cc8ff">ACCEPT</text>
+      <text x="192" y="0" class="mono" font-weight="700" fill="#00e6ff">&#10003;</text>
+    </g>
+  </g>
+</svg>
