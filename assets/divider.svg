@@ -1,12 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 24" width="1200" height="24" role="img" aria-label="Divider with a cyan light sweep synced to the hero">
   <style>
-    /* sweep SYNCED to hero.svg: identical translateX(-520 -> 1280), 9s, same easing,
-       and the glint's bright center sits at the same local x (~51) as the hero beam,
-       so both light up the same X at the same instant, start and end together. */
-    @keyframes glassSweep { 0% { transform: translateX(-520px); } 100% { transform: translateX(1280px); } }
-    .gsweep { animation: glassSweep 9s cubic-bezier(.45,.02,.45,1) infinite; }
+    /* ===== SHARED sweep — identical in hero.svg and divider.svg so they align.
+       bright center at local x=0; translateX maps straight onto the 1200 viewBox. */
+    @keyframes glassSweep {
+      0%   { transform: translateX(-160px); opacity: 0; }
+      7%   { opacity: 1; }
+      93%  { opacity: 1; }
+      100% { transform: translateX(1360px); opacity: 0; }
+    }
+    .gsweep { animation: glassSweep 13s linear infinite; }
+
     @keyframes corepulse { 0%,100% { opacity:.55; } 50% { opacity:1; } }
-    .nucleus { animation: corepulse 9s ease-in-out infinite; }
+    .nucleus { animation: corepulse 13s ease-in-out infinite; }
     @media (prefers-reduced-motion: reduce) {
       .gsweep,.nucleus { animation:none; }
       .gsweep { opacity:0; }
@@ -25,13 +30,11 @@
     <radialGradient id="dHalo" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#aef0ff" stop-opacity=".9"/><stop offset=".4" stop-color="#00bcd4" stop-opacity=".45"/><stop offset="1" stop-color="#00bcd4" stop-opacity="0"/></radialGradient>
   </defs>
 
-  <!-- static hairline -->
   <rect x="0" y="11.4" width="1200" height="1.2" fill="url(#dRule)"/>
-
-  <!-- traveling glint: bright center at local x~51 (matches hero beam), narrow enough to exit off-screen cleanly -->
+  <!-- glint: bright center at local x=0 (matches hero beam), narrow enough to exit off-screen -->
   <g class="gsweep" filter="url(#dGlow)">
-    <ellipse class="nucleus" cx="51" cy="12" rx="110" ry="9" fill="url(#dHalo)"/>
-    <rect x="-49" y="10.6" width="200" height="2.8" rx="1.4" fill="url(#dGlint)"/>
-    <circle class="nucleus" cx="51" cy="12" r="1.9" fill="#f2fdff"/>
+    <ellipse class="nucleus" cx="0" cy="12" rx="110" ry="9" fill="url(#dHalo)"/>
+    <rect x="-100" y="10.6" width="200" height="2.8" rx="1.4" fill="url(#dGlint)"/>
+    <circle class="nucleus" cx="0" cy="12" r="1.9" fill="#f2fdff"/>
   </g>
 </svg>
