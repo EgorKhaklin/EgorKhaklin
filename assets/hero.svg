@@ -5,34 +5,33 @@
     @keyframes beamSweep {
       0%   { transform: translateX(-160px); opacity: 0; }
       3%   { opacity: 1; }
-      40%  { opacity: 1; }
-      42.5% { transform: translateX(1360px); opacity: 0; }
+      74%  { opacity: 1; }
+      77%  { transform: translateX(1360px); opacity: 0; }
       100% { transform: translateX(1360px); opacity: 0; }
     }
-    .gsweep { animation: beamSweep 20s linear infinite; }
+    /* plays ONCE then freezes on the final frame; 0.8s delay so it doesn't fire before paint */
+    .gsweep { animation: beamSweep 11s linear 0.8s 1 both; }
 
     /* the reveal edge: same timing as the beam, but skewed -12deg so it slants WITH the beam.
        skew is baked into the rect's own transform (NOT a wrapper group) — a group inside a
        clipPath breaks the clip in WebKit/Safari, which is why the letters stopped lighting up. */
     @keyframes revealSweep {
       0%   { transform: skewX(-12deg) translateX(-160px); }
-      42.5% { transform: skewX(-12deg) translateX(1360px); }
+      77%  { transform: skewX(-12deg) translateX(1360px); }
       100% { transform: skewX(-12deg) translateX(1360px); }
     }
-    .revealsweep { animation: revealSweep 20s linear infinite; }
-    /* cumulative lit word: revealed by the growing clip, fades out just before the loop */
-    @keyframes litFade { 0%,98% { opacity:1; } 100% { opacity:0; } }
-    .litword { animation: litFade 20s linear infinite; }
+    .revealsweep { animation: revealSweep 11s linear 0.8s 1 both; }
+    /* lit word stays revealed by the growing clip; no loop, so no fade-out (it just holds lit) */
     /* glass finish fogs up at the start of each cycle, then the sweep clears it */
-    @keyframes frostFade { 0% { opacity:0; } 4% { opacity:1; } 98% { opacity:1; } 100% { opacity:0; } }
-    .frost { animation: frostFade 20s linear infinite; }
+    @keyframes frostFade { 0% { opacity:0; } 4% { opacity:1; } 100% { opacity:1; } }
+    .frost { animation: frostFade 11s linear 0.8s 1 both; }
     /* VERIFIED appears only after the sweep finishes (45%), holds, fades before reset */
-    @keyframes verifiedAppear { 0%,42.5% { opacity:0; } 45.5% { opacity:1; } 98% { opacity:1; } 100% { opacity:0; } }
-    .verified { animation: verifiedAppear 20s linear infinite; }
+    @keyframes verifiedAppear { 0%,77% { opacity:0; } 83% { opacity:1; } 100% { opacity:1; } }
+    .verified { animation: verifiedAppear 11s linear 0.8s 1 both; }
     @keyframes breathe { 0%,100% { opacity:.5; } 50% { opacity:.95; } }
     .pulse { animation: breathe 7s ease-in-out infinite; }
     @media (prefers-reduced-motion: reduce) {
-      .gsweep,.revealsweep,.frost,.litword,.verified,.pulse { animation:none; }
+      .gsweep,.revealsweep,.frost,.verified,.pulse { animation:none; }
       .gsweep { opacity:0; }   /* hide the moving beam/glint; the frost clip stays cleared, word + verified shown */
     }
   </style>
