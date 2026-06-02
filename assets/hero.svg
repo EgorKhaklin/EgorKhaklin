@@ -23,14 +23,17 @@
     /* cumulative lit word: revealed by the growing clip, fades out just before the loop */
     @keyframes litFade { 0%,98% { opacity:1; } 100% { opacity:0; } }
     .litword { animation: litFade 20s linear infinite; }
+    /* glass finish fogs up at the start of each cycle, then the sweep clears it */
+    @keyframes frostFade { 0% { opacity:0; } 4% { opacity:1; } 98% { opacity:1; } 100% { opacity:0; } }
+    .frost { animation: frostFade 20s linear infinite; }
     /* VERIFIED appears only after the sweep finishes (45%), holds, fades before reset */
     @keyframes verifiedAppear { 0%,45% { opacity:0; } 48% { opacity:1; } 98% { opacity:1; } 100% { opacity:0; } }
     .verified { animation: verifiedAppear 20s linear infinite; }
     @keyframes breathe { 0%,100% { opacity:.5; } 50% { opacity:.95; } }
     .pulse { animation: breathe 7s ease-in-out infinite; }
     @media (prefers-reduced-motion: reduce) {
-      .gsweep,.revealsweep,.litword,.verified,.pulse { animation:none; }
-      .gsweep { opacity:0; }   /* hide the moving beam/glint; clip + word + verified stay at their full base state */
+      .gsweep,.revealsweep,.frost,.litword,.verified,.pulse { animation:none; }
+      .gsweep { opacity:0; }   /* hide the moving beam/glint; the frost clip stays cleared, word + verified shown */
     }
   </style>
   <defs>
@@ -61,7 +64,7 @@
     <filter id="textGlow" x="-30%" y="-60%" width="160%" height="220%"><feGaussianBlur stdDeviation="3.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
     <filter id="frostTex" x="0" y="0" width="100%" height="100%">
       <feTurbulence type="fractalNoise" baseFrequency="0.9 0.9" numOctaves="2" seed="7" result="n"/>
-      <feColorMatrix in="n" type="matrix" values="0 0 0 0 0.78  0 0 0 0 0.93  0 0 0 0 1  0 0 0 0.04 0"/>
+      <feColorMatrix in="n" type="matrix" values="0 0 0 0 0.78  0 0 0 0 0.93  0 0 0 0 1  0 0 0 0.11 0"/>
     </filter>
     <rect id="paneShape" x="40" y="40" width="1120" height="220" rx="22"/>
     <clipPath id="paneClip"><use href="#paneShape"/></clipPath>
@@ -69,6 +72,8 @@
          reveal edge SLANT exactly like the beam, so each part of each letter lights up right as
          the beam crosses it (not before). base translate = full reveal for static/reduced-motion. -->
     <clipPath id="revealClip"><rect class="revealsweep" x="-2200" y="0" width="2200" height="300" transform="skewX(-12) translate(1360,0)"/></clipPath>
+    <!-- complement of revealClip: covers the UN-opened region (right of the beam) for the frost finish -->
+    <clipPath id="frostClip"><rect class="revealsweep" x="0" y="0" width="2600" height="300" transform="skewX(-12) translate(1360,0)"/></clipPath>
     <g id="wordmark"><text x="600" y="150" text-anchor="middle" font-family="'Helvetica Neue', Arial, system-ui, sans-serif" font-size="86" font-weight="700" letter-spacing="14">KHAKLIN</text></g>
   </defs>
 
@@ -81,13 +86,19 @@
       <path d="M200 40 V260 M400 40 V260 M600 40 V260 M800 40 V260 M1000 40 V260"/>
     </g>
     <use href="#paneShape" fill="url(#paneFill)"/>
-    <use href="#paneShape" filter="url(#frostTex)" opacity=".5"/>
 
-    <!-- dim base: unlit letters read faintly -->
+    <!-- dim base: unlit letters read faintly (seen through the frost) -->
     <use href="#wordmark" fill="url(#wm)" opacity=".28" filter="url(#frostBlur)"/>
 
     <!-- cumulative bright word, revealed up to the beam and held lit -->
     <g class="litword"><g clip-path="url(#revealClip)"><use href="#wordmark" fill="#eafdff" filter="url(#textGlow)"/></g></g>
+
+    <!-- GLASS FINISH: frosted veil over the un-opened (right-of-beam) region; the sweep opens it as it passes -->
+    <g class="frost" clip-path="url(#frostClip)">
+      <use href="#paneShape" fill="#bfe6f0" opacity=".18"/>
+      <use href="#paneShape" filter="url(#frostTex)" opacity=".9"/>
+      <use href="#paneShape" fill="#dff3fa" opacity=".06"/>
+    </g>
 
     <!-- the beam: ONE connected slanted streak (fringe behind, halo, crisp core on top), all skewed together -->
     <g class="gsweep" opacity="0">
