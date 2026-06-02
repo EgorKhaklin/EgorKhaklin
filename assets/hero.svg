@@ -56,9 +56,10 @@
     </filter>
     <rect id="paneShape" x="40" y="40" width="1120" height="220" rx="22"/>
     <clipPath id="paneClip"><use href="#paneShape"/></clipPath>
-    <!-- growing reveal: rect's right edge sits at the beam (local x=0); translateX slides it.
-         base transform = full reveal so static / reduced-motion shows the whole lit word. -->
-    <clipPath id="revealClip"><rect class="gsweep" x="-2200" y="0" width="2200" height="300" transform="translate(1360,0)"/></clipPath>
+    <!-- growing reveal: rect's right edge sits at the beam; the wrapping skewX(-12) makes the
+         reveal edge SLANT exactly like the beam, so each part of each letter lights up right as
+         the beam crosses it (not before). base translate = full reveal for static/reduced-motion. -->
+    <clipPath id="revealClip"><g transform="skewX(-12)"><rect class="gsweep" x="-2200" y="0" width="2200" height="300" transform="translate(1360,0)"/></g></clipPath>
     <g id="wordmark"><text x="600" y="150" text-anchor="middle" font-family="'Helvetica Neue', Arial, system-ui, sans-serif" font-size="86" font-weight="700" letter-spacing="14">KHAKLIN</text></g>
   </defs>
 
