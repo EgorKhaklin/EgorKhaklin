@@ -10,7 +10,7 @@ I build **verifiable systems** — software you don't have to believe.
 
 Most code asks for your trust. Mine hands you the receipt. The projects below are one idea seen through different glass: *you should never have to take the code's word for it.* Every claim ships with the means to check it — clone it, run it, watch it prove itself.
 
-<div align="center">
+<div>
 
 
 <img src="assets/divider.svg" width="100%" alt="" />
