@@ -12,11 +12,6 @@ Most code asks for your trust. Mine hands you the receipt. The projects below ar
 
 <div align="center">
 
-<img src="assets/prove.svg" width="760" alt="glass prove --emit p.txt hello.glass → PENTECOST: ACCEPT" />
-
-<sub>`glass prove` emits a proof · a **second, independent** verifier re-checks it · `ACCEPT`</sub>
-
-</div>
 
 <img src="assets/divider.svg" width="100%" alt="" />
 
