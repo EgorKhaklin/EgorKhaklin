@@ -201,12 +201,12 @@
   <text x="90" y="79" font-family="ui-monospace,'SF Mono',Menlo,monospace"
         font-size="14" letter-spacing="2" fill="#9fb4bd">@EgorKhaklin</text>
 
-  <!-- 422/422 proof badge, top-right -->
+  <!-- verified badge, top-right (timeless — no drifting counts) -->
   <g transform="translate(1042,62)">
     <rect x="0" y="0" width="118" height="26" rx="13" fill="#00bcd4" fill-opacity=".10" stroke="#00bcd4" stroke-opacity=".34"/>
     <circle class="pulse" cx="17" cy="13" r="4" fill="#5cc8ff"/>
     <text x="32" y="17" font-family="ui-monospace,'SF Mono',Menlo,monospace"
-          font-size="12" letter-spacing="1" fill="#bfeefb">422/422 ✓</text>
+          font-size="12" letter-spacing="1" fill="#bfeefb">VERIFIED ✓</text>
   </g>
 
   <!-- tagline beneath the wordmark -->

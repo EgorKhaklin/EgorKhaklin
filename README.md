@@ -26,7 +26,7 @@ Most code asks for your trust. Mine hands you the receipt. The projects below ar
 
 #### → [Glass](https://github.com/EgorKhaklin/Glass) &nbsp;<sub>`flagship`</sub>
 
-A self-hosting verifiable functional language. **Its compiler is written in Glass and self-compiles to byte-identical C** — then carries a from-scratch zero-knowledge STARK prover whose proofs are re-checked by a *second, independent* verifier. 422/422 tests. Runs in the browser.
+A self-hosting verifiable functional language. **Its compiler is written in Glass and self-compiles to byte-identical C** — then carries a from-scratch zero-knowledge STARK prover whose proofs are re-checked by a *second, independent* verifier. Runs in the browser.
 
 <sub>*You can see straight through it.* &nbsp;·&nbsp; `language` · `zk-STARK` · `self-hosting`</sub>
 
