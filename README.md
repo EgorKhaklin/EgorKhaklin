@@ -48,11 +48,6 @@ A national identity-token reference implementation. Post-quantum signing, zero-k
 
 <br>
 
-|  |  |  |
-|:--|:--|:--|
-| **[chaos-one](https://github.com/EgorKhaklin/chaos-one)** | Browser-rendered, Iron-Dome-flavoured air &amp; missile defense — procedural threat waves, four batteries, lead-angle quadratic guidance, continuous weapon–target assignment. | <sub>`real-time`</sub> |
-| **[cassandra-us](https://github.com/EgorKhaklin/cassandra-us)** | Real-time US political sentiment intelligence on a 3D geospatial console. | <sub>`Next.js · r3f`</sub> |
-| **[olympus-ai](https://github.com/EgorKhaklin/olympus-ai)** | A cognitive substrate for AI agents, organized as Greek mythology. | <sub>`beta`</sub> |
 
 <img src="assets/divider.svg" width="100%" alt="" />
 
