@@ -11,6 +11,15 @@
     }
     .gsweep { animation: beamSweep 20s linear infinite; }
 
+    /* the reveal edge: same timing as the beam, but skewed -12deg so it slants WITH the beam.
+       skew is baked into the rect's own transform (NOT a wrapper group) — a group inside a
+       clipPath breaks the clip in WebKit/Safari, which is why the letters stopped lighting up. */
+    @keyframes revealSweep {
+      0%   { transform: skewX(-12deg) translateX(-160px); }
+      45%  { transform: skewX(-12deg) translateX(1360px); }
+      100% { transform: skewX(-12deg) translateX(1360px); }
+    }
+    .revealsweep { animation: revealSweep 20s linear infinite; }
     /* cumulative lit word: revealed by the growing clip, fades out just before the loop */
     @keyframes litFade { 0%,98% { opacity:1; } 100% { opacity:0; } }
     .litword { animation: litFade 20s linear infinite; }
@@ -20,7 +29,7 @@
     @keyframes breathe { 0%,100% { opacity:.5; } 50% { opacity:.95; } }
     .pulse { animation: breathe 7s ease-in-out infinite; }
     @media (prefers-reduced-motion: reduce) {
-      .gsweep,.litword,.verified,.pulse { animation:none; }
+      .gsweep,.revealsweep,.litword,.verified,.pulse { animation:none; }
       .gsweep { opacity:0; }   /* hide the moving beam/glint; clip + word + verified stay at their full base state */
     }
   </style>
@@ -59,7 +68,7 @@
     <!-- growing reveal: rect's right edge sits at the beam; the wrapping skewX(-12) makes the
          reveal edge SLANT exactly like the beam, so each part of each letter lights up right as
          the beam crosses it (not before). base translate = full reveal for static/reduced-motion. -->
-    <clipPath id="revealClip"><g transform="skewX(-12)"><rect class="gsweep" x="-2200" y="0" width="2200" height="300" transform="translate(1360,0)"/></g></clipPath>
+    <clipPath id="revealClip"><rect class="revealsweep" x="-2200" y="0" width="2200" height="300" transform="skewX(-12) translate(1360,0)"/></clipPath>
     <g id="wordmark"><text x="600" y="150" text-anchor="middle" font-family="'Helvetica Neue', Arial, system-ui, sans-serif" font-size="86" font-weight="700" letter-spacing="14">KHAKLIN</text></g>
   </defs>
 
