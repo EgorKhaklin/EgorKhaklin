@@ -54,6 +54,6 @@ A national identity-token reference implementation. Post-quantum signing, zero-k
 
 <br>
 
-<sub>Egor Khaklin &nbsp;·&nbsp; [@EgorKhaklin](https://github.com/EgorKhaklin) &nbsp;·&nbsp; proof over trust</sub>
+<sub>Egor Khaklin · proof over trust</sub>
 
 </div>
