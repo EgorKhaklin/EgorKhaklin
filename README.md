@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/hero.svg?v=7" width="100%" alt="Egor Khaklin. Proof over trust. You should never have to take the code's word for it." />
+<img src="assets/hero.svg?v=8" width="100%" alt="Egor Khaklin. Proof over trust. You should never have to take the code's word for it." />
 
 </div>
 
