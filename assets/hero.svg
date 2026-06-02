@@ -1,131 +1,220 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300" role="img" aria-label="Egor Khaklin — Proof over trust. You should never have to take the code's word for it.">
   <title>Egor Khaklin — Proof over trust</title>
-  <style>
-    /* ===== SHARED sweep — identical in hero.svg and divider.svg so they align =====
-       bright center sits at local x=0; translateX maps straight to the 1200 viewBox,
-       so at any moment the hero beam and the divider glint are at the same X. */
-    @keyframes glassSweep {
-      0%   { transform: translateX(-220px); opacity: 0; }
-      7%   { opacity: 1; }
-      93%  { opacity: 1; }
-      100% { transform: translateX(1420px); opacity: 0; }
-    }
-    .gsweep { animation: glassSweep 9s linear infinite; }
 
-    @keyframes drift   { 0%,100% { transform: translate(0,0); } 50% { transform: translate(-16px,7px); } }
-    @keyframes driftb  { 0%,100% { transform: translate(0,0); } 50% { transform: translate(20px,-9px); } }
-    @keyframes driftc  { 0%,100% { transform: translate(0,0); } 50% { transform: translate(-10px,-6px); } }
-    @keyframes shard   { 0%,100% { transform: translate(0,0) rotate(0deg); opacity:.10; } 50% { transform: translate(14px,-8px) rotate(2deg); opacity:.20; } }
-    @keyframes breathe { 0%,100% { opacity:.5; } 50% { opacity:.95; } }
-    .orb1{animation:drift 15s ease-in-out infinite} .orb2{animation:driftb 19s ease-in-out infinite}
-    .orb3{animation:driftc 23s ease-in-out infinite} .shard{animation:shard 17s ease-in-out infinite}
-    .pulse{animation:breathe 7s ease-in-out infinite}
+  <style>
+    /* ---- timing: slow, film-grade ---- */
+    @keyframes sweep      { 0% { transform: translateX(-520px); } 100% { transform: translateX(1280px); } }
+    @keyframes reveal     { 0%,18% { opacity: 0; } 42% { opacity: 1; } 70% { opacity: 1; } 92%,100% { opacity: 0; } }
+    @keyframes frostfade  { 0% { opacity: .66; } 30% { opacity: .9; } 50% { opacity: .5; } 74% { opacity: .9; } 100% { opacity: .66; } }
+    @keyframes breathe    { 0%,100% { opacity: .55; } 50% { opacity: .95; } }
+    @keyframes drift      { 0% { transform: translate3d(0,0,0); } 50% { transform: translate3d(-14px,6px,0); } 100% { transform: translate3d(0,0,0); } }
+    @keyframes driftb     { 0% { transform: translate(0,0); } 50% { transform: translate(18px,-8px); } 100% { transform: translate(0,0); } }
+    @keyframes caustic    { 0% { opacity: 0; } 30% { opacity: .8; } 60% { opacity: .3; } 100% { opacity: 0; } }
+    @keyframes shimmer    { 0%,100% { stroke-dashoffset: 0; opacity: .35; } 50% { opacity: .9; } }
+    @keyframes flicker    { 0%,100% { opacity: .35; } 25% { opacity: .9; } 60% { opacity: .55; } }
+
+    .sweep   { animation: sweep 9s cubic-bezier(.45,.02,.45,1) infinite; }
+    .reveal  { animation: reveal 9s cubic-bezier(.45,.02,.45,1) infinite; }
+    .frost   { animation: frostfade 9s cubic-bezier(.45,.02,.45,1) infinite; }
+    .caustic { animation: caustic 9s cubic-bezier(.45,.02,.45,1) infinite; }
+    .orb1    { animation: drift 14s ease-in-out infinite; }
+    .orb2    { animation: driftb 18s ease-in-out infinite; }
+    .pulse   { animation: breathe 7s ease-in-out infinite; }
+    .glint   { animation: shimmer 9s ease-in-out infinite; }
+    .spark   { animation: flicker 5s ease-in-out infinite; }
+
     @media (prefers-reduced-motion: reduce) {
-      .gsweep,.orb1,.orb2,.orb3,.shard,.pulse { animation:none; }
-      .gsweep { opacity:0; }
+      .sweep,.reveal,.frost,.caustic,.orb1,.orb2,.pulse,.glint,.spark { animation: none; }
+      .reveal { opacity: 1; }
+      .frost  { opacity: .62; }
     }
   </style>
+
   <defs>
-    <radialGradient id="bg" cx="40%" cy="28%" r="100%">
-      <stop offset="0%" stop-color="#0d1822"/><stop offset="44%" stop-color="#070d14"/><stop offset="100%" stop-color="#04060a"/>
+    <!-- deep background -->
+    <radialGradient id="bg" cx="38%" cy="30%" r="95%">
+      <stop offset="0%"  stop-color="#0c1620"/>
+      <stop offset="42%" stop-color="#070d14"/>
+      <stop offset="100%" stop-color="#05070a"/>
     </radialGradient>
-    <radialGradient id="vignette" cx="50%" cy="48%" r="72%">
-      <stop offset="58%" stop-color="#04060a" stop-opacity="0"/><stop offset="100%" stop-color="#020406" stop-opacity=".55"/>
-    </radialGradient>
+
+    <!-- frosted glass pane fill -->
     <linearGradient id="paneFill" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#0e2731" stop-opacity=".40"/><stop offset="50%" stop-color="#0a1922" stop-opacity=".26"/><stop offset="100%" stop-color="#06121a" stop-opacity=".46"/>
+      <stop offset="0%"   stop-color="#0e2630" stop-opacity=".42"/>
+      <stop offset="50%"  stop-color="#0a1922" stop-opacity=".30"/>
+      <stop offset="100%" stop-color="#06121a" stop-opacity=".46"/>
     </linearGradient>
+
+    <!-- top sheen on the glass -->
     <linearGradient id="sheen" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity=".18"/><stop offset="13%" stop-color="#ffffff" stop-opacity=".03"/><stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="0%"  stop-color="#ffffff" stop-opacity=".16"/>
+      <stop offset="14%" stop-color="#ffffff" stop-opacity=".03"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
     </linearGradient>
+
+    <!-- the moving light shaft -->
     <linearGradient id="shaft" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#00bcd4" stop-opacity="0"/><stop offset="38%" stop-color="#00bcd4" stop-opacity=".10"/>
-      <stop offset="50%" stop-color="#cdf6ff" stop-opacity=".9"/><stop offset="52%" stop-color="#ffffff" stop-opacity=".98"/><stop offset="54%" stop-color="#5cc8ff" stop-opacity=".9"/>
-      <stop offset="64%" stop-color="#00bcd4" stop-opacity=".10"/><stop offset="100%" stop-color="#00bcd4" stop-opacity="0"/>
+      <stop offset="0%"   stop-color="#00bcd4" stop-opacity="0"/>
+      <stop offset="38%"  stop-color="#00bcd4" stop-opacity=".10"/>
+      <stop offset="50%"  stop-color="#bdf3ff" stop-opacity=".85"/>
+      <stop offset="52%"  stop-color="#ffffff" stop-opacity=".95"/>
+      <stop offset="54%"  stop-color="#5cc8ff" stop-opacity=".85"/>
+      <stop offset="64%"  stop-color="#00bcd4" stop-opacity=".10"/>
+      <stop offset="100%" stop-color="#00bcd4" stop-opacity="0"/>
     </linearGradient>
+
+    <!-- refracted spectral fringe trailing the shaft -->
     <linearGradient id="fringe" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#00bcd4" stop-opacity="0"/><stop offset="46%" stop-color="#7df9ff" stop-opacity=".5"/>
-      <stop offset="52%" stop-color="#5cc8ff" stop-opacity=".45"/><stop offset="58%" stop-color="#a98bff" stop-opacity=".32"/><stop offset="100%" stop-color="#a98bff" stop-opacity="0"/>
+      <stop offset="0%"   stop-color="#00bcd4" stop-opacity="0"/>
+      <stop offset="40%"  stop-color="#19f0d8" stop-opacity="0"/>
+      <stop offset="49%"  stop-color="#7df9ff" stop-opacity=".55"/>
+      <stop offset="51%"  stop-color="#5cc8ff" stop-opacity=".5"/>
+      <stop offset="55%"  stop-color="#a98bff" stop-opacity=".35"/>
+      <stop offset="100%" stop-color="#a98bff" stop-opacity="0"/>
     </linearGradient>
+
+    <!-- wordmark gradient -->
     <linearGradient id="wm" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#f4feff"/><stop offset="50%" stop-color="#cbf1fc"/><stop offset="100%" stop-color="#62c6ee"/>
+      <stop offset="0%"   stop-color="#eafbff"/>
+      <stop offset="55%"  stop-color="#bfeefb"/>
+      <stop offset="100%" stop-color="#67c9ef"/>
     </linearGradient>
-    <linearGradient id="wmSheen" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity=".55"/><stop offset="34%" stop-color="#ffffff" stop-opacity="0"/><stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
-    </linearGradient>
-    <radialGradient id="orbA" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#00bcd4" stop-opacity=".55"/><stop offset="60%" stop-color="#00bcd4" stop-opacity=".12"/><stop offset="100%" stop-color="#00bcd4" stop-opacity="0"/></radialGradient>
-    <radialGradient id="orbB" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#5cc8ff" stop-opacity=".42"/><stop offset="100%" stop-color="#5cc8ff" stop-opacity="0"/></radialGradient>
-    <radialGradient id="orbC" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1ad7e8" stop-opacity=".30"/><stop offset="100%" stop-color="#1ad7e8" stop-opacity="0"/></radialGradient>
-    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="6"/></filter>
-    <filter id="glowBig" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="24"/></filter>
-    <filter id="chroma" x="-20%" y="-40%" width="140%" height="180%"><feGaussianBlur stdDeviation="1.3"/></filter>
-    <filter id="textGlow" x="-30%" y="-60%" width="160%" height="220%"><feGaussianBlur stdDeviation="3.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+
+    <radialGradient id="orbA" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"  stop-color="#00bcd4" stop-opacity=".55"/>
+      <stop offset="60%" stop-color="#00bcd4" stop-opacity=".12"/>
+      <stop offset="100%" stop-color="#00bcd4" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orbB" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"  stop-color="#5cc8ff" stop-opacity=".42"/>
+      <stop offset="100%" stop-color="#5cc8ff" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- glows / frost -->
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+    <filter id="glowBig" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="22"/>
+    </filter>
+    <filter id="frostBlur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2.4"/>
+    </filter>
+    <filter id="textGlow" x="-30%" y="-60%" width="160%" height="220%">
+      <feGaussianBlur stdDeviation="3.4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <!-- frosted-glass surface noise: subtle turbulence used as the frost texture -->
+    <filter id="frostTex" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9 0.9" numOctaves="2" seed="7" result="n"/>
+      <feColorMatrix in="n" type="matrix"
+        values="0 0 0 0 0.78  0 0 0 0 0.93  0 0 0 0 1  0 0 0 0.05 0"/>
+    </filter>
+
+    <!-- rounded glass pane shape, reused as clip -->
     <rect id="paneShape" x="40" y="40" width="1120" height="220" rx="22"/>
     <clipPath id="paneClip"><use href="#paneShape"/></clipPath>
-    <!-- moving beam window: clips the bright wordmark copy so light bends THROUGH the letters -->
-    <clipPath id="beamClip"><rect class="gsweep" x="-58" y="0" width="116" height="300"/></clipPath>
-    <g id="wordmark"><text x="600" y="150" text-anchor="middle" font-family="'Helvetica Neue', Arial, system-ui, sans-serif" font-size="86" font-weight="700" letter-spacing="14">KHAKLIN</text></g>
+
+    <!-- the wordmark, defined once so frost + reveal layers share identical geometry -->
+    <g id="wordmark">
+      <text x="600" y="150" text-anchor="middle"
+            font-family="'Helvetica Neue', Arial, system-ui, sans-serif"
+            font-size="86" font-weight="700" letter-spacing="14">KHAKLIN</text>
+    </g>
   </defs>
 
-  <rect width="1200" height="300" fill="#04060a"/>
+  <!-- ====== SCENE ====== -->
+  <rect width="1200" height="300" fill="#05070a"/>
   <rect width="1200" height="300" fill="url(#bg)"/>
 
-  <!-- parallax depth: glow orbs behind the glass -->
+  <!-- depth: slow parallax glow orbs behind the glass -->
   <g filter="url(#glowBig)">
-    <circle class="orb1" cx="300" cy="118" r="120" fill="url(#orbA)"/>
-    <circle class="orb2" cx="930" cy="192" r="150" fill="url(#orbB)"/>
-    <circle class="orb3" cx="640" cy="60"  r="90"  fill="url(#orbC)"/>
+    <circle class="orb1" cx="300" cy="120" r="120" fill="url(#orbA)"/>
+    <circle class="orb2" cx="930" cy="190" r="150" fill="url(#orbB)"/>
   </g>
 
+  <!-- everything that lives inside the pane is clipped to the pane -->
   <g clip-path="url(#paneClip)">
-    <!-- faint architectural grid -->
-    <g opacity=".08" stroke="#5cc8ff" stroke-width="1">
+
+    <!-- faint architectural grid for parallax depth -->
+    <g opacity=".10" stroke="#5cc8ff" stroke-width="1">
       <path d="M40 100 H1160 M40 150 H1160 M40 200 H1160"/>
       <path d="M200 40 V260 M400 40 V260 M600 40 V260 M800 40 V260 M1000 40 V260"/>
     </g>
-    <!-- drifting glass shards for depth -->
-    <g fill="#bfe9f5">
-      <rect class="shard" x="150" y="70"  width="120" height="3" rx="1.5" transform="rotate(-24 210 71)"/>
-      <rect class="shard" x="860" y="150" width="170" height="3" rx="1.5" transform="rotate(-24 945 151)"/>
-      <rect class="shard" x="520" y="210" width="90"  height="2" rx="1"   transform="rotate(-24 565 211)"/>
-    </g>
 
+    <!-- glass body -->
     <use href="#paneShape" fill="url(#paneFill)"/>
 
-    <!-- ===== WORDMARK (always crisp) ===== -->
-    <!-- chromatic refraction edges -->
-    <use href="#wordmark" fill="#15e1ff" opacity=".22" transform="translate(-2.6,0)" filter="url(#chroma)"/>
-    <use href="#wordmark" fill="#a98bff" opacity=".16" transform="translate(2.6,0)"  filter="url(#chroma)"/>
-    <!-- crisp body + glassy top sheen -->
-    <use href="#wordmark" fill="url(#wm)"/>
-    <use href="#wordmark" fill="url(#wmSheen)"/>
-    <!-- specular pass: a brighter copy revealed only inside the moving beam -> light through the glyphs -->
-    <g clip-path="url(#beamClip)"><use href="#wordmark" fill="#f4feff" filter="url(#textGlow)"/></g>
-
-    <!-- the refracting light shaft (bright center at local x=0) -->
-    <g class="gsweep">
-      <rect x="-90" y="40" width="180" height="220" fill="url(#shaft)" filter="url(#soft)" opacity=".7"/>
-      <rect x="-7"  y="40" width="14"  height="220" fill="url(#shaft)"/>
-      <rect x="-80" y="40" width="170" height="220" fill="url(#fringe)" transform="skewX(-12)" opacity=".6"/>
+    <!-- ===== WORDMARK, beneath the frost ===== -->
+    <!-- (1) base ghost: visible through the frost, so the wordmark reads in a static frame -->
+    <g opacity=".30">
+      <use href="#wordmark" fill="url(#wm)" filter="url(#frostBlur)"/>
     </g>
 
+    <!-- (2) frost layer ON TOP of the wordmark: blurred noise + milky veil that fades as light passes -->
+    <g class="frost" opacity=".66">
+      <use href="#paneShape" fill="#0a1620" opacity=".34"/>
+      <use href="#paneShape" filter="url(#frostTex)"/>
+      <rect x="40" y="40" width="1120" height="220" fill="#bfe9f5" opacity=".05" filter="url(#frostBlur)"/>
+    </g>
+
+    <!-- (3) the bright, sharp wordmark revealed in sync with the sweep -->
+    <g class="reveal">
+      <use href="#wordmark" fill="url(#wm)" filter="url(#textGlow)"/>
+    </g>
+
+    <!-- caustic shimmer trailing the sweep -->
+    <g class="caustic" filter="url(#soft)">
+      <path d="M0 150 C 60 110, 120 190, 180 150 S 300 110, 360 150"
+            transform="translate(380,0)" fill="none" stroke="#9af1ff" stroke-width="2" opacity=".6"/>
+      <circle cx="430" cy="110" r="3" fill="#cdf7ff"/>
+      <circle cx="470" cy="200" r="2" fill="#9af1ff"/>
+      <circle cx="520" cy="135" r="2.5" fill="#bdeefb"/>
+      <circle cx="560" cy="185" r="2" fill="#7df9ff"/>
+    </g>
+
+    <!-- the refracting light shaft sweeping across -->
+    <g class="sweep">
+      <!-- soft halo -->
+      <rect x="-40" y="40" width="180" height="220" fill="url(#shaft)" filter="url(#soft)" opacity=".7"/>
+      <!-- crisp core -->
+      <rect x="44" y="40" width="14" height="220" fill="url(#shaft)"/>
+      <!-- spectral refraction fringe, skewed to imply bending light -->
+      <rect x="-10" y="40" width="220" height="220" fill="url(#fringe)" transform="skewX(-12)" opacity=".7"/>
+    </g>
+
+    <!-- top sheen -->
     <use href="#paneShape" fill="url(#sheen)"/>
   </g>
 
-  <!-- vignette + crisp glass rim -->
-  <rect width="1200" height="300" fill="url(#vignette)"/>
+  <!-- crisp glass edge / rim light (outside clip so the stroke is sharp) -->
   <use href="#paneShape" fill="none" stroke="#5cc8ff" stroke-opacity=".34" stroke-width="1.2"/>
   <use href="#paneShape" fill="none" stroke="#ffffff" stroke-opacity=".06" stroke-width="3"/>
 
-  <!-- handle + verified chip -->
-  <circle class="pulse" cx="74" cy="74" r="3.4" fill="#00bcd4"/>
-  <text x="90" y="79" font-family="ui-monospace,'SF Mono',Menlo,monospace" font-size="14" letter-spacing="2" fill="#9fb4bd">@EgorKhaklin</text>
+  <!-- ===== fixed UI furniture ===== -->
+
+  <!-- handle, top-left, mono -->
+  <g class="spark">
+    <circle cx="74" cy="74" r="3.4" fill="#00bcd4"/>
+  </g>
+  <text x="90" y="79" font-family="ui-monospace,'SF Mono',Menlo,monospace"
+        font-size="14" letter-spacing="2" fill="#9fb4bd">@EgorKhaklin</text>
+
+  <!-- verified badge, top-right (timeless — no drifting counts) -->
   <g transform="translate(1042,62)">
     <rect x="0" y="0" width="118" height="26" rx="13" fill="#00bcd4" fill-opacity=".10" stroke="#00bcd4" stroke-opacity=".34"/>
     <circle class="pulse" cx="17" cy="13" r="4" fill="#5cc8ff"/>
-    <text x="32" y="17" font-family="ui-monospace,'SF Mono',Menlo,monospace" font-size="12" letter-spacing="1" fill="#bfeefb">VERIFIED ✓</text>
+    <text x="32" y="17" font-family="ui-monospace,'SF Mono',Menlo,monospace"
+          font-size="12" letter-spacing="1" fill="#bfeefb">VERIFIED ✓</text>
   </g>
-  <!-- taglines -->
-  <text x="600" y="206" text-anchor="middle" font-family="'Helvetica Neue', Arial, system-ui, sans-serif" font-size="14.5" font-weight="500" letter-spacing="5.5" fill="#9fb4bd">PROOF OVER TRUST</text>
-  <text x="600" y="232" text-anchor="middle" font-family="ui-monospace,'SF Mono',Menlo,monospace" font-size="11.5" letter-spacing="1.5" fill="#5f7682">you should never have to take the code&apos;s word for it</text>
+
+  <!-- tagline beneath the wordmark -->
+  <text x="600" y="206" text-anchor="middle"
+        font-family="'Helvetica Neue', Arial, system-ui, sans-serif"
+        font-size="14.5" font-weight="500" letter-spacing="5.5" fill="#9fb4bd">PROOF OVER TRUST</text>
+
+  <text x="600" y="232" text-anchor="middle"
+        font-family="ui-monospace,'SF Mono',Menlo,monospace"
+        font-size="11.5" letter-spacing="1.5" fill="#5f7682">you should never have to take the code&apos;s word for it</text>
 </svg>
