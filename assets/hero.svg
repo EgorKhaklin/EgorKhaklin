@@ -9,8 +9,8 @@
       77%  { transform: translateX(1360px); opacity: 0; }
       100% { transform: translateX(1360px); opacity: 0; }
     }
-    /* plays ONCE then freezes on the final frame; 0.8s delay so it doesn't fire before paint */
-    .gsweep { animation: beamSweep 11s linear 0.8s 1 both; }
+    /* plays ONCE the instant the image renders, then freezes on the final frame */
+    .gsweep { animation: beamSweep 11s linear 1 both; }
 
     /* the reveal edge: same timing as the beam, but skewed -12deg so it slants WITH the beam.
        skew is baked into the rect's own transform (NOT a wrapper group) — a group inside a
@@ -20,18 +20,17 @@
       77%  { transform: skewX(-12deg) translateX(1360px); }
       100% { transform: skewX(-12deg) translateX(1360px); }
     }
-    .revealsweep { animation: revealSweep 11s linear 0.8s 1 both; }
+    .revealsweep { animation: revealSweep 11s linear 1 both; }
     /* lit word stays revealed by the growing clip; no loop, so no fade-out (it just holds lit) */
     /* glass finish fogs up at the start of each cycle, then the sweep clears it */
-    @keyframes frostFade { 0% { opacity:0; } 4% { opacity:1; } 100% { opacity:1; } }
-    .frost { animation: frostFade 11s linear 0.8s 1 both; }
+    /* frost is fully present at frame 0, the instant the image renders; the sweep clears it via the clip */
     /* VERIFIED appears only after the sweep finishes (45%), holds, fades before reset */
     @keyframes verifiedAppear { 0%,77% { opacity:0; } 83% { opacity:1; } 100% { opacity:1; } }
-    .verified { animation: verifiedAppear 11s linear 0.8s 1 both; }
+    .verified { animation: verifiedAppear 11s linear 1 both; }
     @keyframes breathe { 0%,100% { opacity:.5; } 50% { opacity:.95; } }
     .pulse { animation: breathe 7s ease-in-out infinite; }
     @media (prefers-reduced-motion: reduce) {
-      .gsweep,.revealsweep,.frost,.verified,.pulse { animation:none; }
+      .gsweep,.revealsweep,.verified,.pulse { animation:none; }
       .gsweep { opacity:0; }   /* hide the moving beam/glint; the frost clip stays cleared, word + verified shown */
     }
   </style>

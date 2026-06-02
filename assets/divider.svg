@@ -8,8 +8,8 @@
       77%  { transform: translateX(1360px); opacity: 0; }
       100% { transform: translateX(1360px); opacity: 0; }
     }
-    /* plays ONCE then freezes on the final frame; 0.8s delay so it doesn't fire before paint */
-    .gsweep { animation: beamSweep 11s linear 0.8s 1 both; }
+    /* plays ONCE the instant the image renders, then freezes on the final frame */
+    .gsweep { animation: beamSweep 11s linear 1 both; }
 
     @media (prefers-reduced-motion: reduce) { .gsweep { animation:none; opacity:0; } }
   </style>
