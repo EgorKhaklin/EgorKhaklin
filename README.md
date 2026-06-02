@@ -17,7 +17,7 @@ Most code still asks for your trust. Mine hands you the receipt instead. The pro
 
 > Not a portfolio. Evidence.
 
-#### → [Glass](https://github.com/EgorKhaklin/Glass) &nbsp;<sub>`flagship`
+#### → [Glass](https://github.com/EgorKhaklin/Glass) &nbsp;`flagship`
 
 A self-hosting verifiable functional language. **Its compiler is written in Glass and self-compiles to byte-identical C**, then carries a from-scratch zero-knowledge STARK prover whose proofs are re-checked by a *second, independent* verifier. 
 
