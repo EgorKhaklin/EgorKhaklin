@@ -57,4 +57,8 @@ A national identity-token reference implementation. Post-quantum signing, zero-k
 
 <sub>Egor Khaklin · proof over trust</sub>
 
+<br>
+
+<img src="https://komarev.com/ghpvc/?username=EgorKhaklin&label=views&color=0e1116&style=flat&abbreviated=true" alt="profile views" />
+
 </div>
