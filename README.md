@@ -52,7 +52,6 @@ A national identity-token reference implementation. Post-quantum signing, zero-k
 
 <br>
 
-<sub>Fund the proof, not the promise. Every backer is named in [the ledger](BACKERS.md).</sub>
 
 <br>
 
