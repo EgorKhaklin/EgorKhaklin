@@ -16,8 +16,18 @@ Most code still asks for your trust. Mine hands you the receipt instead. The pro
 ## Selected work
 
 > Not a portfolio. Evidence.
+>
+> <br>
 
-#### → [Glass](https://github.com/EgorKhaklin/Glass) &nbsp;`flagship`
+#### → [polaris-id](https://github.com/EgorKhaklin/polaris-id) &nbsp;`flagship`
+
+A national identity-token reference implementation. Post-quantum signing, zero-knowledge by default, **compulsion-resistant by construction**. It can't betray you, because it was never built able to.
+
+<sub>*Identity that survives coercion.* &nbsp;·&nbsp; `post-quantum` · `ZK`</sub>
+
+<br>
+
+#### → [Glass](https://github.com/EgorKhaklin/Glass) 
 
 A self-hosting verifiable functional language. **Its compiler is written in Glass and self-compiles to byte-identical C**, then carries a from-scratch zero-knowledge STARK prover whose proofs are re-checked by a *second, independent* verifier. 
 
@@ -31,15 +41,7 @@ Verifiable analytics over data you never reveal. Commit a sensitive dataset; any
 
 <sub>*Built on Glass · educational-grade crypto, by honest design.* &nbsp;·&nbsp; `ZK` · `private analytics`</sub>
 
-<br>
 
-#### → [polaris-id](https://github.com/EgorKhaklin/polaris-id)
-
-A national identity-token reference implementation. Post-quantum signing, zero-knowledge by default, **compulsion-resistant by construction**. It can't betray you, because it was never built able to.
-
-<sub>*Identity that survives coercion.* &nbsp;·&nbsp; `post-quantum` · `ZK`</sub>
-
-<br>
 
 
 <img src="assets/divider.svg?v=10" width="100%" alt="" />
