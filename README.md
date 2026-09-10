@@ -21,7 +21,7 @@ Most code still asks for your trust. Mine hands you the receipt instead. The pro
 
 #### → [polaris-id](https://github.com/EgorKhaklin/polaris-id) &nbsp;`flagship`
 
-A national identity-token reference implementation. Post-quantum signing, zero-knowledge by default, **compulsion-resistant by construction**. It can't betray you, because it was never built able to.
+A national identity-token reference implementation. Post-quantum signing, issuer-unlinkable, **compulsion-resistant by construction**. It can't betray you, because it was never built able to.
 
 <sub>*Identity that survives coercion.* &nbsp;·&nbsp; `post-quantum` · `ZK`</sub>
 
