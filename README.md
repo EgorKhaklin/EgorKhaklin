@@ -21,9 +21,7 @@
 
 Polaris is a credential-verification engine built for the moment trust is tested: issuer-unlinkable, duress-aware, and designed to evolve with cryptography. Credentials use ML-DSA-65, zero-knowledge verification leaves no token identifier behind, and an audited migration path keeps security adaptable against classical and quantum attacks.
 
-.
 
-<sub>*Identity that survives coercion.* &nbsp;·&nbsp; `post-quantum` · `ZK`</sub>
 
 <br>
 
@@ -31,7 +29,7 @@ Polaris is a credential-verification engine built for the moment trust is tested
 
 A self-hosting verifiable functional language. Its compiler is written in Glass and self-compiles to byte-identical C, then carries a from-scratch zero-knowledge STARK prover whose proofs are re-checked by a *second, independent* verifier. 
 
-<sub>*You can see straight through it.* &nbsp;·&nbsp; `language` · `zk-STARK` · `self-hosting`</sub>
+
 
 <br>
 
