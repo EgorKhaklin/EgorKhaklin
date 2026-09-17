@@ -37,9 +37,6 @@ A self-hosting verifiable functional language. Its compiler is written in Glass 
 
 Verifiable analytics over data you never reveal. Commit a sensitive dataset; anyone runs an aggregate query and gets the answer plus a zero-knowledge proof it's the true result, revealing the commitment, the query, and the answer. Never a row.
 
-<sub>*Built on Glass · educational-grade crypto, by honest design.* &nbsp;·&nbsp; `ZK` · `private analytics`</sub>
-
-
 
 
 <img src="assets/divider.svg?v=10" width="100%" alt="" />
