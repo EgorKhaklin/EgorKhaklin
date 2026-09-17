@@ -19,7 +19,9 @@
 
 #### → [polaris-id](https://github.com/EgorKhaklin/polaris-id) &nbsp;`flagship`
 
-A national identity-token reference implementation. Post-quantum signing, issuer-unlinkable, **compulsion-resistant by construction**. It can't betray you, because it was never built able to.
+Polaris is a credential-verification engine built for the moment trust is tested: issuer-unlinkable, duress-aware, and designed to evolve with cryptography. Credentials use ML-DSA-65, zero-knowledge verification leaves no token identifier behind, and an audited migration path keeps security adaptable against classical and quantum attacks.
+
+.
 
 <sub>*Identity that survives coercion.* &nbsp;·&nbsp; `post-quantum` · `ZK`</sub>
 
@@ -27,7 +29,7 @@ A national identity-token reference implementation. Post-quantum signing, issuer
 
 #### → [Glass](https://github.com/EgorKhaklin/Glass) 
 
-A self-hosting verifiable functional language. **Its compiler is written in Glass and self-compiles to byte-identical C**, then carries a from-scratch zero-knowledge STARK prover whose proofs are re-checked by a *second, independent* verifier. 
+A self-hosting verifiable functional language. Its compiler is written in Glass and self-compiles to byte-identical C, then carries a from-scratch zero-knowledge STARK prover whose proofs are re-checked by a *second, independent* verifier. 
 
 <sub>*You can see straight through it.* &nbsp;·&nbsp; `language` · `zk-STARK` · `self-hosting`</sub>
 
@@ -35,7 +37,7 @@ A self-hosting verifiable functional language. **Its compiler is written in Glas
 
 #### → [glass-private-intelligence](https://github.com/EgorKhaklin/glass-private-intelligence)
 
-Verifiable analytics over data you never reveal. Commit a sensitive dataset; anyone runs an aggregate query and gets the answer **plus a zero-knowledge proof it's the true result**, revealing the commitment, the query, and the answer. Never a row.
+Verifiable analytics over data you never reveal. Commit a sensitive dataset; anyone runs an aggregate query and gets the answer plus a zero-knowledge proof it's the true result, revealing the commitment, the query, and the answer. Never a row.
 
 <sub>*Built on Glass · educational-grade crypto, by honest design.* &nbsp;·&nbsp; `ZK` · `private analytics`</sub>
 
