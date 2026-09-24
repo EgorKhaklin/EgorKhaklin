@@ -6,11 +6,6 @@
 
 <br>
 
-
-
-<br>
-</div>
-
 ## Selected work
 
 > Not a portfolio. Evidence.
@@ -19,7 +14,11 @@
 
 #### → [polaris-id](https://github.com/EgorKhaklin/polaris-id) &nbsp;`flagship`
 
+<a href="https://openid.net/certification/certified-oid4vp-haip-final/"><img src="assets/openid-certified.png?v=1" alt="OpenID Certified" width="130" align="right"></a>
+
 Polaris is a credential-verification engine built for the moment trust is tested: issuer-unlinkable, duress-aware, and designed to evolve with cryptography. Credentials use ML-DSA-65, zero-knowledge verification leaves no token identifier behind, and an audited migration path keeps security adaptable against classical and quantum attacks.
+
+**Certified.** `polaris-oid4vp 1.0.0rc7` is OpenID Certified™ by Egor Khaklin to the OpenID4VP 1.0 + HAIP 1.0 Verifier profile (24 Sep 2026), passing all 11 conformance test modules with zero failures. [Listing →](https://openid.net/certification/certified-oid4vp-haip-final/)
 
 
 
