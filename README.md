@@ -18,7 +18,7 @@
 
 Polaris is a credential-verification engine built for the moment trust is tested: issuer-unlinkable, duress-aware, and designed to evolve with cryptography. Credentials use ML-DSA-65, zero-knowledge verification leaves no token identifier behind, and an audited migration path keeps security adaptable against classical and quantum attacks.
 
-**Certified.** `polaris-oid4vp 1.0.0rc7` is OpenID Certified™ by Egor Khaklin to the OpenID4VP 1.0 + HAIP 1.0 Verifier profile (24 Sep 2026), passing all 11 conformance test modules with zero failures. [Listing →](https://openid.net/certification/certified-oid4vp-haip-final/)
+**Certified.** `polaris-oid4vp 1.0.0rc7` is OpenID Certified™ by Egor Khaklin to the OpenID4VP 1.0 + HAIP 1.0 Verifier profile (24 Sep 2026): all 11 conformance test modules completed with zero failures, 7 passing automatically and 4 through the certification team's manual review. [Listing →](https://openid.net/certification/certified-oid4vp-haip-final/?polaris=1) · [Test results →](https://www.certification.openid.net/plan-detail.html?plan=7hXWngaA7f0QO&public=true)
 
 
 
