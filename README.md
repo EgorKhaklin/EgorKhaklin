@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/hero.svg?v=11" width="100%" alt="Egor Khaklin. VANTA Corp." />
+<img src="assets/hero.svg?v=12" width="100%" alt="Egor Khaklin. Khaklin Technologies." />
 
 </div>
 
@@ -51,12 +51,12 @@ Verifiable analytics over data you never reveal. Commit a sensitive dataset; any
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/emblem-dark.svg?v=1">
-  <img src="assets/emblem-light.svg?v=1" width="76" alt="The owl emblem" />
+  <img src="assets/emblem-light.svg?v=1" width="76" alt="The Khaklin Technologies owl" />
 </picture>
 
 <sub><i>“There is nothing impossible to him who will try.”</i> &nbsp;Alexander the Great</sub>
 
-<sub>Egor Khaklin · VANTA Corp · proof over trust</sub>
+<sub>Egor Khaklin · Khaklin Technologies · proof over trust</sub>
 
 <br><br>
 
