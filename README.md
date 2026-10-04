@@ -6,13 +6,14 @@
 
 <br>
 
-## ◆ Selected work
-
-> Not a portfolio. Evidence.
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/title-selected-work-dark.svg?v=1">
+  <img src="assets/title-selected-work-light.svg?v=1" width="100%" alt="Selected work. Not a portfolio; evidence." />
+</picture>
 
 <br>
 
-#### <a href="https://github.com/EgorKhaklin/polaris-id"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/link-polaris-id-dark.svg?v=1"><img src="assets/link-polaris-id-light.svg?v=1" alt="polaris-id" height="34"></picture></a> 
+#### <a href="https://github.com/EgorKhaklin/polaris-id"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/link-polaris-id-dark.svg?v=1"><img src="assets/link-polaris-id-light.svg?v=1" alt="polaris-id" height="34"></picture></a>
 
 <a href="https://openid.net/certification/certified-oid4vp-haip-final/"><img src="assets/openid-certified.png?v=1" alt="OpenID Certified" width="130" align="right"></a>
 
@@ -41,13 +42,9 @@ Verifiable analytics over data you never reveal. Commit a sensitive dataset; any
   <img src="assets/divider-light.svg?v=1" width="100%" alt="" />
 </picture>
 
+<br><br>
+
 <div align="center">
-
-
-
-
-
-
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/emblem-dark.svg?v=1">
@@ -56,7 +53,9 @@ Verifiable analytics over data you never reveal. Commit a sensitive dataset; any
 
 <sub><i>“There is nothing impossible to him who will try.”</i> &nbsp;Alexander the Great</sub>
 
-<sub>Egor Khaklin · Khaklin Technologies · proof over trust</sub>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/signature-dark.svg?v=1">
+  <img src="assets/signature-light.svg?v=1" alt="Egor Khaklin · Khaklin Technologies · proof over trust" />
+</picture>
 
-<br><br>
-
+</div>
