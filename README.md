@@ -6,16 +6,9 @@
 
 <br>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/title-selected-work-dark.svg?v=2">
-  <img src="assets/title-selected-work-light.svg?v=2" width="100%" alt="Selected work. Not a portfolio; evidence." />
-</picture>
-
 <div align="center">
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/column-boaz-dark.svg?v=1"><img align="left" src="assets/column-boaz-light.svg?v=1" width="8.5%" alt="Boaz"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/column-jachin-dark.svg?v=1"><img align="right" src="assets/column-jachin-light.svg?v=1" width="8.5%" alt="Jachin"></picture>
-
-<br>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/entablature-dark.svg?v=1"><img src="assets/entablature-light.svg?v=1" width="100%" alt="Selected work. Not a portfolio; evidence."></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/shaft-dark.svg?v=1"><img align="left" src="assets/shaft-light.svg?v=1" width="8.5%" alt=""></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/shaft-dark.svg?v=1"><img align="right" src="assets/shaft-light.svg?v=1" width="8.5%" alt=""></picture>
 
 #### <a href="https://github.com/EgorKhaklin/polaris-id"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/link-polaris-id-dark.svg?v=2"><img src="assets/link-polaris-id-light.svg?v=2" alt="polaris-id" height="34"></picture></a>
 
