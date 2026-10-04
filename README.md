@@ -12,23 +12,25 @@
 
 <br>
 
-#### ◆ [polaris-id](https://github.com/EgorKhaklin/polaris-id) &nbsp;`flagship`
+#### <a href="https://github.com/EgorKhaklin/polaris-id"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/link-polaris-id-dark.svg?v=1"><img src="assets/link-polaris-id-light.svg?v=1" alt="polaris-id" height="34"></picture></a> &nbsp;`flagship`
 
 <a href="https://openid.net/certification/certified-oid4vp-haip-final/"><img src="assets/openid-certified.png?v=1" alt="OpenID Certified" width="130" align="right"></a>
 
 Polaris is a credential-verification engine built for the moment trust is tested: issuer-unlinkable, duress-aware, and designed to evolve with cryptography. Credentials are signed with ML-DSA-65 under an audited algorithm-migration path, and zero-knowledge verification leaves no token identifier behind.
 
-**Certified.** `polaris-oid4vp 1.0.0rc7` is OpenID Certified™ by Egor Khaklin to the OpenID4VP 1.0 + HAIP 1.0 Verifier profile (24 Sep 2026): all 11 conformance test modules completed with zero failures, 7 passing automatically and 4 through the certification team's manual review. [Listing →](https://openid.net/certification/certified-oid4vp-haip-final/?polaris=1) · [Test results →](https://www.certification.openid.net/plan-detail.html?plan=7hXWngaA7f0QO&public=true)
+**Certified.** `polaris-oid4vp 1.0.0rc7` is OpenID Certified™ by Egor Khaklin to the OpenID4VP 1.0 + HAIP 1.0 Verifier profile (24 Sep 2026): all 11 conformance test modules completed with zero failures, 7 passing automatically and 4 through the certification team's manual review.
+
+<a href="https://openid.net/certification/certified-oid4vp-haip-final/?polaris=1"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/link-listing-dark.svg?v=1"><img src="assets/link-listing-light.svg?v=1" alt="Listing" height="28"></picture></a>&nbsp;&nbsp;<a href="https://www.certification.openid.net/plan-detail.html?plan=7hXWngaA7f0QO&amp;public=true"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/link-test-results-dark.svg?v=1"><img src="assets/link-test-results-light.svg?v=1" alt="Test results" height="28"></picture></a>
 
 <br>
 
-#### ◆ [Glass](https://github.com/EgorKhaklin/Glass)
+#### <a href="https://github.com/EgorKhaklin/Glass"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/link-glass-dark.svg?v=1"><img src="assets/link-glass-light.svg?v=1" alt="Glass" height="34"></picture></a>
 
 A self-hosting verifiable functional language. Its compiler is written in Glass and self-compiles to byte-identical C, then carries a from-scratch zero-knowledge STARK prover whose proofs are re-checked by a *second, independent* verifier.
 
 <br>
 
-#### ◆ [glass-private-intelligence](https://github.com/EgorKhaklin/glass-private-intelligence)
+#### <a href="https://github.com/EgorKhaklin/glass-private-intelligence"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/link-glass-private-intelligence-dark.svg?v=1"><img src="assets/link-glass-private-intelligence-light.svg?v=1" alt="glass-private-intelligence" height="34"></picture></a>
 
 Verifiable analytics over data you never reveal. Commit a sensitive dataset; anyone runs an aggregate query and gets the answer plus a zero-knowledge proof it's the true result, revealing the commitment, the query, and the answer. Never a row.
 
