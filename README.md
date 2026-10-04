@@ -8,7 +8,7 @@
 
 <div align="center">
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/entablature-dark.svg?v=3"><img src="assets/entablature-light.svg?v=3" width="100%" alt="Selected work. Not a portfolio; evidence."></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/shaft-dark.svg?v=3"><img align="left" src="assets/shaft-light.svg?v=3" width="8.5%" alt=""></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/shaft-dark.svg?v=3"><img align="right" src="assets/shaft-light.svg?v=3" width="8.5%" alt=""></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/temple-entablature-dark.svg"><img src="assets/temple-entablature-light.svg" width="100%" alt="Selected work. Not a portfolio; evidence."></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/temple-shaft-dark.svg"><img align="left" src="assets/temple-shaft-light.svg" width="8.5%" alt=""></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/temple-shaft-dark.svg"><img align="right" src="assets/temple-shaft-light.svg" width="8.5%" alt=""></picture>
 
 #### <a href="https://github.com/EgorKhaklin/polaris-id"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/link-polaris-id-dark.svg?v=2"><img src="assets/link-polaris-id-light.svg?v=2" alt="polaris-id" height="34"></picture></a>
 
