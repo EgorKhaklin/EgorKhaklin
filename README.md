@@ -25,8 +25,8 @@ Issuer-unlinkable. Duress-aware. Signed with ML-DSA-65.
 
 #### <a href="https://github.com/EgorKhaklin/Glass"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/link-glass-dark.svg?v=2"><img src="assets/link-glass-light.svg?v=2" alt="Glass" height="34"></picture></a>
 
-A verifiable language that compiles itself.<br>
-Byte-identical C. Zero-knowledge proofs, re-checked by a second, independent verifier.
+A verifiable language that compiles itself. Byte-identical C. <br> 
+Zero-knowledge proofs, re-checked by a second, independent verifier.
 
 <br>
 
