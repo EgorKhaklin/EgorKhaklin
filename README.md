@@ -55,8 +55,8 @@ Every aggregate carries a zero-knowledge proof that it is true. Never a row.
 <sub><i>“There is nothing impossible to him who will try.”</i> &nbsp;Alexander the Great</sub>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/signature-dark.svg?v=1">
-  <img src="assets/signature-light.svg?v=1" alt="Egor Khaklin · Khaklin Technologies · proof over trust" />
+  <source media="(prefers-color-scheme: dark)" srcset="assets/signature-dark.svg?v=2">
+  <img src="assets/signature-light.svg?v=2" alt="Egor Khaklin · proof over trust · Khaklin Technologies" />
 </picture>
 
 </div>
