@@ -13,7 +13,7 @@
 
 <div align="center">
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/column-dark.svg?v=1"><img align="left" src="assets/column-light.svg?v=1" width="72" height="560" alt=""></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/column-dark.svg?v=1"><img align="right" src="assets/column-light.svg?v=1" width="72" height="560" alt=""></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/column-dark.svg?v=1"><img align="left" src="assets/column-light.svg?v=1" width="8.5%" alt=""></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/column-dark.svg?v=1"><img align="right" src="assets/column-light.svg?v=1" width="8.5%" alt=""></picture>
 
 <br>
 
