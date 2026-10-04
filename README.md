@@ -43,13 +43,11 @@ Verifiable analytics over data you never reveal. Commit a sensitive dataset; any
 
 <div align="center">
 
-<br>
 
-**Every claim on this page is a command you can run.**
 
-<sub>Don't trust the description. Clone it, build it, verify the proof.</sub>
 
-<br><br>
+
+
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/emblem-dark.svg?v=1">
