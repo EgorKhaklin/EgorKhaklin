@@ -18,9 +18,8 @@
 Credential verification for the moment trust is tested.<br>
 Issuer-unlinkable. Duress-aware. Signed with ML-DSA-65.
 
-<sub><b>OpenID Certified™</b> verifier &nbsp;·&nbsp; <code>polaris-oid4vp 1.0.0rc7</code> &nbsp;·&nbsp; OpenID4VP 1.0 + HAIP 1.0</sub>
-
-<a href="https://openid.net/certification/certified-oid4vp-haip-final/?polaris=1"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/caption-listing-dark.svg?v=1"><img src="assets/caption-listing-light.svg?v=1" alt="The listing" height="22"></picture></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.certification.openid.net/plan-detail.html?plan=7hXWngaA7f0QO&amp;public=true"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/caption-test-results-dark.svg?v=1"><img src="assets/caption-test-results-light.svg?v=1" alt="The test results" height="22"></picture></a>
+<a href="https://openid.net/certification/certified-oid4vp-haip-final/?polaris=1"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/seal-openid-certified-dark.svg?v=1"><img src="assets/seal-openid-certified-light.svg?v=1" alt="OpenID® Certified™" height="22"></picture></a>&nbsp;&nbsp;&nbsp;<a href="https://www.certification.openid.net/plan-detail.html?plan=7hXWngaA7f0QO&amp;public=true"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/caption-test-results-dark.svg?v=1"><img src="assets/caption-test-results-light.svg?v=1" alt="The test results" height="22"></picture></a><br>
+<sub><code>polaris-oid4vp 1.0.0rc7</code> verifier &nbsp;·&nbsp; OpenID4VP 1.0 + HAIP 1.0</sub>
 
 <br>
 
@@ -57,6 +56,11 @@ Every aggregate carries a zero-knowledge proof that it is true. Never a row.
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/signature-dark.svg?v=2">
   <img src="assets/signature-light.svg?v=2" alt="Egor Khaklin · proof over trust · Khaklin Technologies" />
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/fineprint-dark.svg?v=1">
+  <img src="assets/fineprint-light.svg?v=1" alt="OpenID® and OpenID® Certified™ are trademarks of the OpenID Foundation." />
 </picture>
 
 </div>
