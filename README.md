@@ -60,6 +60,3 @@ Verifiable analytics over data you never reveal. Commit a sensitive dataset; any
 
 <br><br>
 
-<img src="https://komarev.com/ghpvc/?username=EgorKhaklin&label=views&color=000000&style=flat&abbreviated=true" alt="profile views" />
-
-</div>
