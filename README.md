@@ -7,13 +7,13 @@
 <br>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/title-selected-work-dark.svg?v=1">
-  <img src="assets/title-selected-work-light.svg?v=1" width="100%" alt="Selected work. Not a portfolio; evidence." />
+  <source media="(prefers-color-scheme: dark)" srcset="assets/title-selected-work-dark.svg?v=2">
+  <img src="assets/title-selected-work-light.svg?v=2" width="100%" alt="Selected work. Not a portfolio; evidence." />
 </picture>
 
 <br>
 
-#### <a href="https://github.com/EgorKhaklin/polaris-id"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/link-polaris-id-dark.svg?v=1"><img src="assets/link-polaris-id-light.svg?v=1" alt="polaris-id" height="34"></picture></a>
+#### <a href="https://github.com/EgorKhaklin/polaris-id"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/link-polaris-id-dark.svg?v=2"><img src="assets/link-polaris-id-light.svg?v=2" alt="polaris-id" height="34"></picture></a>
 
 <a href="https://openid.net/certification/certified-oid4vp-haip-final/"><img src="assets/openid-certified.png?v=1" alt="OpenID Certified" width="130" align="right"></a>
 
@@ -25,13 +25,13 @@ Polaris is a credential-verification engine built for the moment trust is tested
 
 <br>
 
-#### <a href="https://github.com/EgorKhaklin/Glass"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/link-glass-dark.svg?v=1"><img src="assets/link-glass-light.svg?v=1" alt="Glass" height="34"></picture></a>
+#### <a href="https://github.com/EgorKhaklin/Glass"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/link-glass-dark.svg?v=2"><img src="assets/link-glass-light.svg?v=2" alt="Glass" height="34"></picture></a>
 
 A self-hosting verifiable functional language. Its compiler is written in Glass and self-compiles to byte-identical C, then carries a from-scratch zero-knowledge STARK prover whose proofs are re-checked by a *second, independent* verifier.
 
 <br>
 
-#### <a href="https://github.com/EgorKhaklin/glass-private-intelligence"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/link-glass-private-intelligence-dark.svg?v=1"><img src="assets/link-glass-private-intelligence-light.svg?v=1" alt="glass-private-intelligence" height="34"></picture></a>
+#### <a href="https://github.com/EgorKhaklin/glass-private-intelligence"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/link-glass-private-intelligence-dark.svg?v=2"><img src="assets/link-glass-private-intelligence-light.svg?v=2" alt="glass-private-intelligence" height="34"></picture></a>
 
 Verifiable analytics over data you never reveal. Commit a sensitive dataset; anyone runs an aggregate query and gets the answer plus a zero-knowledge proof it's the true result, revealing the commitment, the query, and the answer. Never a row.
 
