@@ -11,6 +11,10 @@
   <img src="assets/title-selected-work-light.svg?v=2" width="100%" alt="Selected work. Not a portfolio; evidence." />
 </picture>
 
+<div align="center">
+
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/column-dark.svg?v=1"><img align="left" src="assets/column-light.svg?v=1" width="72" height="560" alt=""></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/column-dark.svg?v=1"><img align="right" src="assets/column-light.svg?v=1" width="72" height="560" alt=""></picture>
+
 <br>
 
 #### <a href="https://github.com/EgorKhaklin/polaris-id"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/link-polaris-id-dark.svg?v=2"><img src="assets/link-polaris-id-light.svg?v=2" alt="polaris-id" height="34"></picture></a>
@@ -35,7 +39,7 @@ Zero-knowledge proofs, re-checked by a second, independent verifier.
 Answers from data you never reveal.<br>
 Every aggregate carries a zero-knowledge proof that it is true. Never a row.
 
-<br>
+</div>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/divider-dark.svg?v=1">
