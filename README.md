@@ -12,7 +12,7 @@
 
 <br>
 
-#### <a href="https://github.com/EgorKhaklin/polaris-id"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/link-polaris-id-dark.svg?v=1"><img src="assets/link-polaris-id-light.svg?v=1" alt="polaris-id" height="34"></picture></a> &nbsp;`flagship`
+#### <a href="https://github.com/EgorKhaklin/polaris-id"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/link-polaris-id-dark.svg?v=1"><img src="assets/link-polaris-id-light.svg?v=1" alt="polaris-id" height="34"></picture></a> 
 
 <a href="https://openid.net/certification/certified-oid4vp-haip-final/"><img src="assets/openid-certified.png?v=1" alt="OpenID Certified" width="130" align="right"></a>
 
