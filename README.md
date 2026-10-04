@@ -20,7 +20,7 @@ Polaris is a credential-verification engine built for the moment trust is tested
 
 **Certified.** `polaris-oid4vp 1.0.0rc7` is OpenID Certified™ by Egor Khaklin to the OpenID4VP 1.0 + HAIP 1.0 Verifier profile (24 Sep 2026): all 11 conformance test modules completed with zero failures, 7 passing automatically and 4 through the certification team's manual review.
 
-<a href="https://openid.net/certification/certified-oid4vp-haip-final/?polaris=1"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/link-listing-dark.svg?v=1"><img src="assets/link-listing-light.svg?v=1" alt="Listing" height="28"></picture></a>&nbsp;&nbsp;<a href="https://www.certification.openid.net/plan-detail.html?plan=7hXWngaA7f0QO&amp;public=true"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/link-test-results-dark.svg?v=1"><img src="assets/link-test-results-light.svg?v=1" alt="Test results" height="28"></picture></a>
+<a href="https://openid.net/certification/certified-oid4vp-haip-final/?polaris=1"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/caption-listing-dark.svg?v=1"><img src="assets/caption-listing-light.svg?v=1" alt="The listing" height="22"></picture></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.certification.openid.net/plan-detail.html?plan=7hXWngaA7f0QO&amp;public=true"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/caption-test-results-dark.svg?v=1"><img src="assets/caption-test-results-light.svg?v=1" alt="The test results" height="22"></picture></a>
 
 <br>
 
