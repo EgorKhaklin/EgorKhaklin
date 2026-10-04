@@ -18,7 +18,7 @@
 Credential verification for the moment trust is tested.<br>
 Issuer-unlinkable. Duress-aware. Signed with ML-DSA-65.
 
-<a href="https://openid.net/certification/certified-oid4vp-haip-final/?polaris=1"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/seal-openid-certified-dark.svg?v=1"><img src="assets/seal-openid-certified-light.svg?v=1" alt="OpenID® Certified™" height="22"></picture></a>&nbsp;&nbsp;&nbsp;<a href="https://www.certification.openid.net/plan-detail.html?plan=7hXWngaA7f0QO&amp;public=true"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/caption-test-results-dark.svg?v=1"><img src="assets/caption-test-results-light.svg?v=1" alt="The test results" height="22"></picture></a><br>
+<a href="https://openid.net/certification/certified-oid4vp-haip-final/?polaris=1"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/caption-openid-certified-dark.svg?v=1"><img src="assets/caption-openid-certified-light.svg?v=1" alt="OpenID® Certified™" height="22"></picture></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.certification.openid.net/plan-detail.html?plan=7hXWngaA7f0QO&amp;public=true"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/caption-test-results-dark.svg?v=1"><img src="assets/caption-test-results-light.svg?v=1" alt="The test results" height="22"></picture></a><br>
 <sub><code>polaris-oid4vp 1.0.0rc7</code> verifier &nbsp;·&nbsp; OpenID4VP 1.0 + HAIP 1.0</sub>
 
 <br>
