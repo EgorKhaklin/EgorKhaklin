@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/hero.svg?v=12" width="100%" alt="Egor Khaklin. Khaklin Technologies." />
+<img src="assets/hero.svg?v=13" width="100%" alt="Egor Khaklin. Khaklin Technologies." />
 
 </div>
 
