@@ -8,7 +8,7 @@
 
 <div align="center">
 
-<picture><source media="(max-width: 767.98px)" srcset="assets/temple-banner-compact-02532bad.svg"><source media="(max-width: 1279.98px)" srcset="assets/temple-banner-wide-d053f45b.svg"><source media="(prefers-color-scheme: dark)" srcset="assets/temple-entablature-dark-338ab3de.svg"><img src="assets/temple-entablature-light-dd6d70b1.svg" width="100%" align="top" alt="Selected work."></picture><picture><source media="(max-width: 1279.98px)" srcset="assets/temple-blank-4c5b8637.svg"><source media="(prefers-color-scheme: dark)" srcset="assets/temple-shaft-dark-d37b80ce.svg"><img align="left" src="assets/temple-shaft-light-17efc74f.svg" width="8.5%" alt=""></picture><picture><source media="(max-width: 1279.98px)" srcset="assets/temple-blank-4c5b8637.svg"><source media="(prefers-color-scheme: dark)" srcset="assets/temple-shaft-dark-d37b80ce.svg"><img align="right" src="assets/temple-shaft-light-17efc74f.svg" width="8.5%" alt=""></picture>
+<picture><source media="(max-width: 767.98px)" srcset="assets/temple-banner-compact-02532bad.svg"><source media="(max-width: 1279.98px)" srcset="assets/temple-banner-wide-d053f45b.svg"><source media="(prefers-color-scheme: dark)" srcset="assets/temple-entablature-dark-338ab3de.svg"><img src="assets/temple-entablature-light-dd6d70b1.svg" width="100%" align="top" alt="Selected work."></picture><picture><source media="(max-width: 1279.98px)" srcset="assets/temple-blank-4c5b8637.svg"><source media="(prefers-color-scheme: dark)" srcset="assets/temple-shaft-dark-a7167948.svg"><img align="left" src="assets/temple-shaft-light-0fc17de6.svg" width="8.5%" alt=""></picture><picture><source media="(max-width: 1279.98px)" srcset="assets/temple-blank-4c5b8637.svg"><source media="(prefers-color-scheme: dark)" srcset="assets/temple-shaft-dark-a7167948.svg"><img align="right" src="assets/temple-shaft-light-0fc17de6.svg" width="8.5%" alt=""></picture>
 
 #### <a href="https://github.com/EgorKhaklin/polaris-id"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/link-polaris-id-dark.svg?v=2"><img src="assets/link-polaris-id-light.svg?v=2" alt="polaris-id" height="34"></picture></a>
 
@@ -27,10 +27,17 @@ Zero-knowledge proofs, re-checked by a second, independent verifier.
 
 <br>
 
-#### <a href="https://github.com/EgorKhaklin/glass-private-intelligence"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/link-glass-private-intelligence-dark.svg?v=2"><img src="assets/link-glass-private-intelligence-light.svg?v=2" alt="glass-private-intelligence" height="34"></picture></a>
+#### <a href="https://github.com/EgorKhaklin/tiresias"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/link-tiresias-dark.svg"><img src="assets/link-tiresias-light.svg" alt="Tiresias" height="34"></picture></a>
 
 Answers from data you never reveal.<br>
 Every aggregate carries a zero-knowledge proof that it is true. Never a row.
+
+<br>
+
+#### <a href="https://github.com/EgorKhaklin/pandora"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/link-pandora-dark.svg"><img src="assets/link-pandora-light.svg" alt="Pandora" height="34"></picture></a>
+
+Certified sparse recovery from many small basis-pursuit solves.<br>
+Every answer passes an exact-fit test, so a hit is a recovery, not a guess.
 
 </div>
 
